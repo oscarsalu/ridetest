@@ -81,8 +81,9 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script> 
-    <script src="<?= base_url() ?>assets/js/plugins/select2/select2.full.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places" type="text/javascript"></script>
+    <script src="<?= base_url() ?>assets/js/plugins/select2/select2.full.min.js"></script>  
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAna627YCrFvM6COONV-S6K-Asf9so4m4k&libraries=places" type="text/javascript"></script>
+    <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places" type="text/javascript"></script> -->
         <script type="text/javascript">
                function initialize() {
                        var input = document.getElementById('origin');
