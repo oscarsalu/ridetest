@@ -23,7 +23,10 @@
             <div>
             <h2>Share Ride</h2>
             </div>
-            <div id="infoMessage"><?php echo $message;?></div>
+            <?php if($this->session->flashdata('message')){ ?>
+                <div class="alert alert-info"><?= $this->session->flashdata('message'); ?></div>
+            <?php } ?>
+           <!--  <div id="infoMessage"><?php echo $message;?></div> -->
             <p>Login in Using your Email. To see it in action.</p>
             <form class="m-t" role="form" action="<?= site_url('auth/login') ?>" method="post">
                 <div class="form-group">

@@ -57,16 +57,25 @@ public function bookride($getrideid)
 				);	
         	// $this->db->where('id', $getrideid)->$this->db->update('getride', $bookrid_data);
         	if ($this->bookrid_model->create_bookrid($createbookrid) && $this->bookrid_model->updateremaining($getrideid, $bookrid_data)) {
-        		 $from_email = "oscarsalu@gmail.com"; 
-		         $to_email = $this->session->userdata('email'); 
-		   
-		         //Load email library 
-		         $this->load->library('email'); 
-		   
-		         $this->email->from($from_email, 'Admin'); 
-		         $this->email->to($to_email);
-		         $this->email->subject('Ride Booked'); 
-		         $this->email->message('Your Ride Car No '.$vehicle.' is booked.'); 
+        		 
+        		  $to_email = $this->session->userdata('email'); 
+
+        		  $this->load->library('email');
+			        $config['protocol'] = 'smtp';
+			        $config['smtp_host'] = 'ssl://smtp.googlemail.com';
+			        $config['smtp_port'] = 465;
+			        $config['smtp_user'] = 'oscarsalu@gmail.com';
+			        $config['smtp_pass'] = ''; //password removed
+			        $config['charset'] = 'utf-8';
+			        $config['mailtype'] = 'html';
+			        $config['newline'] = "\r\n";
+			        //send email
+			        $this->email->initialize($config);
+			        $this->email->clear();
+			        $this->email->from('oscarsalu@gmail.com', 'RideShare');
+			        $this->email->to($to_email);
+			        $this->email->subject('Ride Booked.');
+			        $this->email->message('Your Ride Car No '.$vehicle.' is booked.'); 
 		   
 		         //Send mail 
 		         if($this->email->send()) {

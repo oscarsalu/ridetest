@@ -9,8 +9,14 @@ class Bookrid_model extends CI_Model {
 	//Retrieve all records
 	public function getBookrid()
 	{
-		$query = $this->db->get('bookrid');
-		return $query->result();
+		$results = $this->db->select('bookrid.*,users.first_name ,users.last_name, getride.origin, getride.destination, getride.vehiclename')
+                    ->from('bookrid')
+                    ->join('users', 'users.id = bookrid.bookerid')
+                    ->join('getride', 'getride.id = bookrid.getrideid')
+                    ->get()
+                    ->result();
+
+        return $results;
 	}
 	//insert data to table
 	public function create_bookrid($data)

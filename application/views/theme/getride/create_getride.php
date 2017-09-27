@@ -8,9 +8,9 @@
 	<section class="content">
         <div class="row">
                 <div class="col-lg-12">
-                <?php if(isset($message)){ ?>
-					<div class="alert alert-success"><?= $message ?></div>
-				<?php } ?>
+                <?php if($this->session->flashdata('message')){ ?>
+                    <div class="alert alert-info"><?= $this->session->flashdata('message'); ?></div>
+                <?php } ?>
                     <div class="ibox">
                         <div class="ibox-title">
                             <h5>Add Ride<small> Information</small></h5>

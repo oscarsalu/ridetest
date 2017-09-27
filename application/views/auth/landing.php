@@ -44,8 +44,8 @@
         <div class="jumbotron" style="background:none;box-shadow:none; margin-top: 5cm">
             <div class="container">
             <div class="row">
-            <?php if(isset($message)){ ?>
-                <div class="alert alert-success"><?= $message ?></div>
+            <?php if($this->session->flashdata('message')){ ?>
+                <div class="alert alert-info"><?= $this->session->flashdata('message'); ?></div>
             <?php } ?>
                     <h2 style="color:black; text-align: center;">Search Ride</h2>       
                     <div class="form-group col-md-6">

@@ -11,8 +11,8 @@
 			</div>
 		</div>
 		<div class="box-body">
-		<?php if(isset($message)){ ?>
-			<div class="alert alert-success"><?= $message ?></div>
+		<?php if($this->session->flashdata('message')){ ?>
+			<div class="alert alert-info"><?= $this->session->flashdata('message'); ?></div>
 		<?php } ?>
 				<table  class="table table-bordered table-striped" id="example1">
 					<thead>
