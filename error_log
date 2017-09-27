@@ -1,0 +1,4 @@
+[27-Apr-2017 09:30:49 America/New_York] PHP Fatal error:  Call to undefined method Paypal_model::withdrawals() in /home/algomine/public_html/writers/application/controllers/Payout.php on line 179
+[12-May-2017 07:59:37 America/New_York] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/algomine/public_html/writers/application/controllers/Orders.php on line 680
+[18-May-2017 05:12:59 America/New_York] PHP Fatal error:  Call to a member function userdata() on null in /home/algomine/public_html/writers/application/controllers/Messaging.php on line 8
+[18-May-2017 08:26:53 America/New_York] PHP Fatal error:  Call to a member function userdata() on null in /home/algomine/public_html/writers/application/controllers/Messaging.php on line 8
