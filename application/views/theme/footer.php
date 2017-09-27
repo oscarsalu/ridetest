@@ -4,10 +4,10 @@
     <!-- /.content-wrapper -->
 	<div class="footer">
 	    <div class="pull-right">
-		Built with <strong>&#10084;</strong> By The Crew.
+		Built with <strong>&#10084;</strong>.
 	    </div>
             <div>
-                <strong>Copyright</strong>Algomine &copy; 2017
+                <strong>Copyright</strong>Rideshare inc &copy; 2017
             </div>
         </div>
 	<!-- Mainly scripts -->
